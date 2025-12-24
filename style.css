@@ -1,0 +1,35 @@
+body {
+    font-family: Georgia, serif;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#controls {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#text-box {
+    background: white;
+    width: 60%;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#line {
+    font-size: 20px;
+    line-height: 1.6;
+}
