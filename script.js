@@ -5,6 +5,10 @@ fetch("scripture.txt")
     .then(res => res.text())
     .then(data => {
         parseScripture(data);
+        const savedIndex = Number.parseInt(localStorage.getItem("bomReaderIndex"), 10);
+        if (Number.isInteger(savedIndex) && savedIndex >= 0 && savedIndex < items.length) {
+            index = savedIndex;
+        }
         displayItem();
     });
 
@@ -55,6 +59,8 @@ function displayItem() {
         display.style.fontWeight = "normal";
         display.style.fontSize = "20px";
     }
+
+    localStorage.setItem("bomReaderIndex", index.toString());
 }
 
 function nextLine() {
