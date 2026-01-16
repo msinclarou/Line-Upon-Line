@@ -20,6 +20,20 @@ button {
     cursor: pointer;
 }
 
+#jump-controls {
+    margin-top: 10px;
+}
+
+#jump-controls label {
+    margin-right: 8px;
+}
+
+#chapter-select {
+    font-size: 16px;
+    padding: 8px 12px;
+    min-width: 220px;
+}
+
 #text-box {
     background: white;
     width: 60%;
