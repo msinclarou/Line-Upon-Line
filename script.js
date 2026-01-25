@@ -247,6 +247,7 @@ const chapterNames = [
 const chapterNameSet = new Set(chapterNames);
 
 initializeChapterSelect();
+initializeKeyboardShortcuts();
 
 fetch("scripture.txt")
     .then(res => res.text())
@@ -386,4 +387,22 @@ function findCurrentChapterIndex(startIndex) {
         }
     }
     return null;
+}
+
+function initializeKeyboardShortcuts() {
+    document.addEventListener("keydown", event => {
+        const target = event.target;
+        const tagName = target && target.tagName ? target.tagName.toLowerCase() : "";
+        if (tagName === "input" || tagName === "textarea" || tagName === "select") {
+            return;
+        }
+
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            prevLine();
+        } else if (event.key === "ArrowRight") {
+            event.preventDefault();
+            nextLine();
+        }
+    });
 }
