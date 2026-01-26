@@ -6,20 +6,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="scroll-container">
+    <section class="page page-reading">
+        <h1>Book of Mormon</h1>
 
-<h1>Book of Mormon</h1>
+        <div id="controls">
+            <button onclick="prevLine()">⬆ Previous</button>
+            <button onclick="nextLine()">⬇ Next</button>
+            <div id="jump-controls">
+                <label for="chapter-select">Jump to chapter:</label>
+                <select id="chapter-select"></select>
+            </div>
+        </div>
 
-<div id="controls">
-    <button onclick="prevLine()">⬆ Previous</button>
-    <button onclick="nextLine()">⬇ Next</button>
-    <div id="jump-controls">
-        <label for="chapter-select">Jump to chapter:</label>
-        <select id="chapter-select"></select>
-    </div>
-</div>
-
-<div id="text-box">
-    <p id="line"></p>
+        <div id="text-box">
+            <p id="line"></p>
+        </div>
+    </section>
+    <section class="page page-landing">
+        <div class="landing-content">
+            <h2>test area</h2>
+            <p>Welcome to the horizontal landing page.</p>
+        </div>
+    </section>
 </div>
 
 <script src="script.js"></script>
