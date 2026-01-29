@@ -26,12 +26,22 @@ body {
 .page-landing {
     background: linear-gradient(135deg, #111827, #1f2937);
     color: #f9fafb;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.landing-content {
+    width: 100%;
 }
 
 .landing-content h2 {
     font-size: 36px;
     margin-bottom: 10px;
+}
+
+.landing-content iframe {
+    width: 100%;
+    height: 80vh;
+    border: 0;
 }
 
 .landing-content p {

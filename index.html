@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- line 6 and 7 we might be able to take out. its just some CSP stuff to try and get an iframe to work. However iframes cannot show google docs homepages becuase of security issues -->
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://www.w3schools.com">
+    <meta http-equiv="X-Frame-Options" content="ALLOW-FROM https://www.w3schools.com">
     <title>Line Upon Line</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,7 +12,7 @@
 <div class="scroll-container">
     <section class="page page-reading">
         <h1>Book of Mormon</h1>
-
+        <h2>read the Book of Mormon one line at a time!</h2>
         <div id="controls">
             <button onclick="prevLine()">⬆ Previous</button>
             <button onclick="nextLine()">⬇ Next</button>
@@ -25,8 +28,14 @@
     </section>
     <section class="page page-landing">
         <div class="landing-content">
-            <h2>test area</h2>
-            <p>Welcome to the horizontal landing page.</p>
+            <h2>Church of Jesus Christ Website 80vh</h2>
+            <iframe width="560" height="315" src="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="page page-landing">
+        <div class="landing-content">
+            <h2>Scriptures Study Library</h2>
+            <iframe width="560" height="315" src="https://www.churchofjesuschrist.org/study/scriptures?lang=eng&platform=web" title="Scriptures study library" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 </div>
