@@ -95,3 +95,39 @@ button {
     font-size: 20px;
     line-height: 1.6;
 }
+
+@media (max-width: 600px) {
+    .page.page-reading {
+        padding: 20px 16px;
+    }
+
+    .page.page-reading h1 {
+        margin-bottom: 12px;
+    }
+
+    .page.page-reading h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 20px;
+    }
+
+    #controls {
+        margin-bottom: 8px;
+    }
+
+    #text-box {
+        width: 100%;
+        margin-top: 6px;
+        padding: 18px;
+    }
+
+    #nav-controls {
+        margin-top: 12px;
+    }
+
+    #nav-controls button {
+        font-size: 18px;
+        padding: 14px 20px;
+        min-width: 140px;
+    }
+}
