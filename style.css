@@ -61,6 +61,11 @@ h1 {
     margin-top: 20px;
 }
 
+#nav-controls button {
+    font-size: 22px;
+    padding: 16px 32px;
+}
+
 button {
     font-size: 16px;
     padding: 10px 15px;
