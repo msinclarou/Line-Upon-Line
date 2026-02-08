@@ -308,11 +308,11 @@ function displayItem() {
     if (item.type === "chapter") {
         display.innerText = item.text;
         display.style.fontWeight = "bold";
-        display.style.fontSize = "26px";
+        display.style.fontSize = "50px";
     } else {
         display.innerText = item;
         display.style.fontWeight = "normal";
-        display.style.fontSize = "20px";
+        display.style.fontSize = "50px";
     }
 
     localStorage.setItem("bomReaderIndex", index.toString());
