@@ -59,12 +59,19 @@ h1 {
 
 #nav-controls {
     margin-top: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 #nav-controls button {
     font-size: 50px;
     padding: 20px 40px;
-    min-width: 160px;
+    width: 250px;
+    height: 120px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -90,7 +97,7 @@ button {
 
 #text-box {
     background: white;
-    width: 60%;
+    width: 85%;
     margin: auto;
     padding: 25px;
     border-radius: 8px;
