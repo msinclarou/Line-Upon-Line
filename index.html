@@ -36,7 +36,34 @@
         <div class="notes-section">
             <h2>My Notes</h2>
             <p>Write down your thoughts, impressions, and study notes below.</p>
-            <textarea id="notes-box" placeholder="Start typing your notes here..."></textarea>
+            <div class="notes-editor">
+                <div id="toolbar">
+                    <select id="font-select" title="Font">
+                        <option value="Georgia">Georgia</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <select id="size-select" title="Size">
+                        <option value="1">Small</option>
+                        <option value="3" selected>Normal</option>
+                        <option value="5">Large</option>
+                        <option value="7">Huge</option>
+                    </select>
+                    <div class="toolbar-divider"></div>
+                    <button type="button" class="toolbar-btn" data-command="bold" title="Bold"><b>B</b></button>
+                    <button type="button" class="toolbar-btn" data-command="italic" title="Italic"><i>I</i></button>
+                    <div class="toolbar-divider"></div>
+                    <button type="button" class="toolbar-btn" data-command="justifyLeft" title="Align Left">&#8676;</button>
+                    <button type="button" class="toolbar-btn" data-command="justifyCenter" title="Align Center">&#8596;</button>
+                    <button type="button" class="toolbar-btn" data-command="justifyRight" title="Align Right">&#8677;</button>
+                    <div class="toolbar-divider"></div>
+                    <button type="button" class="toolbar-btn" data-command="insertUnorderedList" title="Bullet List">&#8226; List</button>
+                    <button type="button" class="toolbar-btn" data-command="insertOrderedList" title="Numbered List">1. List</button>
+                </div>
+                <div id="notes-box" contenteditable="true"></div>
+            </div>
         </div>
     </section>
     <section class="page page-landing">
