@@ -389,6 +389,24 @@ function findCurrentChapterIndex(startIndex) {
     return null;
 }
 
+function initializeNotes() {
+    const notesBox = document.getElementById("notes-box");
+    if (!notesBox) {
+        return;
+    }
+
+    const savedNotes = localStorage.getItem("studyNotes");
+    if (savedNotes) {
+        notesBox.value = savedNotes;
+    }
+
+    notesBox.addEventListener("input", () => {
+        localStorage.setItem("studyNotes", notesBox.value);
+    });
+}
+
+initializeNotes();
+
 function initializeKeyboardShortcuts() {
     document.addEventListener("keydown", event => {
         const target = event.target;
