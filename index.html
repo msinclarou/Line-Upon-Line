@@ -14,28 +14,30 @@
         <h1>Book of Mormon</h1>
         <h2>read the Book of Mormon one line at a time!</h2>
         <div id="controls">
-            <button onclick="prevLine()">⬆ Previous</button>
-            <button onclick="nextLine()">⬇ Next</button>
             <div id="jump-controls">
                 <label for="chapter-select">Jump to chapter:</label>
                 <select id="chapter-select"></select>
             </div>
         </div>
-
         <div id="text-box">
-            <p id="line"></p>
+            <p id="line" ></p>
+            <!-- <p id="line" class="text-content"></p> class concept doesn't work -->
+        </div>
+        <div id="nav-controls">
+            <button onclick="prevLine()">⬆ Previous</button>
+            <button onclick="nextLine()">⬇ Next</button>
         </div>
     </section>
     <section class="page page-landing">
         <div class="landing-content">
-            <h2>Church of Jesus Christ Website 80vh</h2>
-            <iframe width="560" height="315" src="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Church of Jesus Christ Website</h2>
+            <iframe src="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng" title="Come Follow Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
     <section class="page page-landing">
         <div class="landing-content">
-            <h2>Scriptures Study Library</h2>
-            <iframe width="560" height="315" src="https://www.churchofjesuschrist.org/study/scriptures?lang=eng&platform=web" title="Scriptures study library" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2>Scripture Study Library</h2>
+            <iframe src="https://www.churchofjesuschrist.org/study/scriptures?lang=eng&platform=web" title="Scriptures study library" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 </div>
