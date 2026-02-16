@@ -397,12 +397,47 @@ function initializeNotes() {
 
     const savedNotes = localStorage.getItem("studyNotes");
     if (savedNotes) {
-        notesBox.value = savedNotes;
+        notesBox.innerHTML = savedNotes;
     }
 
     notesBox.addEventListener("input", () => {
-        localStorage.setItem("studyNotes", notesBox.value);
+        localStorage.setItem("studyNotes", notesBox.innerHTML);
     });
+
+    // Toolbar buttons
+    document.querySelectorAll(".toolbar-btn").forEach(btn => {
+        btn.addEventListener("mousedown", event => {
+            event.preventDefault();
+        });
+        btn.addEventListener("click", () => {
+            document.execCommand(btn.dataset.command, false, null);
+            notesBox.focus();
+        });
+    });
+
+    // Font selector
+    const fontSelect = document.getElementById("font-select");
+    if (fontSelect) {
+        fontSelect.addEventListener("mousedown", event => {
+            event.stopPropagation();
+        });
+        fontSelect.addEventListener("change", () => {
+            document.execCommand("fontName", false, fontSelect.value);
+            notesBox.focus();
+        });
+    }
+
+    // Size selector
+    const sizeSelect = document.getElementById("size-select");
+    if (sizeSelect) {
+        sizeSelect.addEventListener("mousedown", event => {
+            event.stopPropagation();
+        });
+        sizeSelect.addEventListener("change", () => {
+            document.execCommand("fontSize", false, sizeSelect.value);
+            notesBox.focus();
+        });
+    }
 }
 
 initializeNotes();
@@ -411,7 +446,7 @@ function initializeKeyboardShortcuts() {
     document.addEventListener("keydown", event => {
         const target = event.target;
         const tagName = target && target.tagName ? target.tagName.toLowerCase() : "";
-        if (tagName === "input" || tagName === "textarea" || tagName === "select") {
+        if (tagName === "input" || tagName === "textarea" || tagName === "select" || (target && target.isContentEditable)) {
             return;
         }
 
